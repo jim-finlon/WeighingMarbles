@@ -47,7 +47,6 @@ namespace WeighingMarbles.Services
         {
             var marbleCount = marbles.StartingList.Count;
             double marblesPerGroup = Math.Ceiling(marbleCount / 3.0);
-            var roundedUp = Math.Ceiling(marblesPerGroup);
             var newMarbleList = new MarbleWeighing
             {
                 Group1 = new List<Marble>(),
@@ -80,7 +79,6 @@ namespace WeighingMarbles.Services
             marbles.Group1ListWeight = WeighMarbleList(newMarbleList.Group1);
             marbles.Group2ListWeight = WeighMarbleList(newMarbleList.Group2);
             marbles.Group3ListWeight = WeighMarbleList(newMarbleList.Group3);
-            var survivor = new MarbleWeighing();
 
             if (marbles.Group1ListWeight != marbles.Group2ListWeight)
             {
