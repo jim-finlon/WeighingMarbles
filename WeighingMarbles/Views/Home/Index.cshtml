@@ -7,26 +7,20 @@
 
 
 <div class="row">
+    <br/>
+    Test with @Model.FirstOrDefault().StartingList.Count Marbles solved with @Model.Count Weighings
+    <br/>
     @foreach (MarbleWeighing marbleList in Model)
     {
-        @*<div>@marbleList.StartingList.ToString()</div>*@
+        <br/>
+        <div>New Iteration: list of remaining marbles</div>
         foreach (var marble in marbleList.StartingList)
         {
             <div>@marble.ItemNumber / @marble.Weight</div>
         }
 
- 
-        @*<div>@marbleList.Group1.ToString()</div>
-        <div>@marbleList.Group1ListWeight.ToString()</div>
 
-        <div>@marbleList.Group2.ToString()</div>
-        <div>@marbleList.Group2ListWeight.ToString()</div>
-
-        <div>@marbleList.Group3.ToString()</div>
-        <div>@marbleList.Group3ListWeight.ToString()</div>
-
-        <div>@marbleList.Survivor.ToString()</div>*@
     }
-    
-   
+
+
 </div>
