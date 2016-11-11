@@ -1,0 +1,32 @@
+﻿@using WeighingMarbles.ViewModels
+@model List<MarbleWeighing>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    @foreach (MarbleWeighing marbleList in Model)
+    {
+        @*<div>@marbleList.StartingList.ToString()</div>*@
+        foreach (var marble in marbleList.StartingList)
+        {
+            <div>@marble.ItemNumber / @marble.Weight</div>
+        }
+
+ 
+        @*<div>@marbleList.Group1.ToString()</div>
+        <div>@marbleList.Group1ListWeight.ToString()</div>
+
+        <div>@marbleList.Group2.ToString()</div>
+        <div>@marbleList.Group2ListWeight.ToString()</div>
+
+        <div>@marbleList.Group3.ToString()</div>
+        <div>@marbleList.Group3ListWeight.ToString()</div>
+
+        <div>@marbleList.Survivor.ToString()</div>*@
+    }
+    
+   
+</div>
