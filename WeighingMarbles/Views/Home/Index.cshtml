@@ -12,13 +12,16 @@
     <br/>
     @foreach (MarbleWeighing marbleList in Model)
     {
+        var x = 1;
+
         <br/>
-        <div>New Iteration: list of remaining marbles</div>
+        <div>Iteration @x: list of remaining marbles</div>
         foreach (var marble in marbleList.StartingList)
         {
-            <div>@marble.ItemNumber / @marble.Weight</div>
+            <div>Marble Id: @marble.ItemNumber / Marble Weight: @marble.Weight</div>
         }
 
+        x++;
 
     }
 
